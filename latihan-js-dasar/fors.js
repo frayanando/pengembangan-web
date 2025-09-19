@@ -9,3 +9,8 @@ for(let i= 1; i <= 20; i++) {
 }
 
 console.log("jumlah semua bilang genapter sebut adalah:",jumlah);
+
+
+for (let i = 5; i >= 1; i--) {
+    console.log(" Hitung mundur : " + i);
+}
