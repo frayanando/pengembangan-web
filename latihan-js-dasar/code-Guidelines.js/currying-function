@@ -1,0 +1,22 @@
+// simulasi untuk komputasi berat
+function getGreeting(){
+    var x =0
+    for (i=0; i<1000000000;i++){
+        x +=i
+    }
+    return "Selamat pagi"
+}
+
+function say (callback) {
+    var greeting = callback()
+    return function(name){
+        console.log(greeting,name)
+    }
+}
+
+var users = ['Fuad','Hasan','ismi','Budi','Azhar']
+var sayGreeting= say(getGreeting)
+
+users.map(function(user) {
+    return sayGreeting (user)
+})
